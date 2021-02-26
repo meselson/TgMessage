@@ -8,7 +8,7 @@ $message = $_REQUEST['message'] ?? '';
 $bot = new Bot();
 
 if (is_null($token)) {
-    echo json_encode(['code' => 422, 'message' => 'token 不能为空']);
+    echo json_encode(['code' => 422, 'message' => 'token cannot be empty']);
 } else {
     // 发送消息
     $chat_id = $bot->decryption($token);
